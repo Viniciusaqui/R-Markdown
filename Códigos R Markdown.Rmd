@@ -1,0 +1,260 @@
+---
+title: "Códigos R Markdown"
+author: "Vinícius Aquino de Laet"
+date: "25/05/2021"
+output: html_document
+---
+
+# Cabeçalhos:
+
+Para se fazer cabeçalhos, deve-se usar o símbolo #, caso queira usar o símbolo como exemplo, use o símbolo / (ao contrário), como foi feito abaixo usando a palavra maçã.
+
+Obs. Dê sempre um espaço após o símbolo inicial e o que for escrever, e para colocar algo e uma nova linha escreva saltando o espaço de uma linha como foi feito no presente código.
+
+## Maçã
+
+\#\# maçã
+
+# Formatação de Texto:
+
+## Itálico:
+
+Para se colocar algo em itálico, deve-se colocar a palavra, frase ou o que desejar ser colocado em itálico entre o símbolo *, veja exemplo abaixo em que o sujeito da frase está em itálico.
+
+\* = *Itálico*
+
+*Maria* gosta de maçã.
+
+## Negrito:
+
+Para se colocar algo em negrito, deve-se colocar o que queira negritar entre o símbolo *, só que para que o símbolo deve ser colocado 2 vezes. Veja exemplo em que a palavra torta fica em negrito.
+
+\*\* = **Negrito**
+
+Maria gosta de **torta** de maçã.
+
+## Formatação em Código:
+
+Para se colocar algo como se fosse um código, deve-se usar o símbolo de crase (`), colocando a palavra ou função desejada entre esse símbolo. Veja exemplo em que o código de histograma é colocado nessa formatação.
+
+\` = `Código`
+
+Para se obter um histograma das variáveis deve-se usar o comando `hist()`.
+
+## Listas Ordenadas, Não Ordenadas e Sublistas:
+
+### Lista Ordenada:
+
+Para se criar uma lista ordenada, deve-se colocar o número e em seguida um ponto, espaço e depois o que quer ser colocado naquela lista. Veja exemplo:
+
+Obs. Nesse caso não se usa o espaço.
+
+1. Maçã
+2. Laranja
+3. Mamão
+4. Morango 
+
+### Lista Não Ordenada:
+
+Para se criar uma lista não ordenada, deve-se colocar o asterisco (*) e em seguida espaço e depois o quedeseja colocar naquela lista. Veja exemplo:
+
+Obs. Se o espaço não for colocado após o símbolo, a lista aparecerá com os códigos e as palavras na mesma linha, ou seja, uma na frente da outra.
+
+* Maçã
+* Banana
+* Uva
+* Limão
+
+### Sublista:
+
+Para se criar uma sublista, deve-se digitar usar a tecla tab e adicionar o símbolo + seguido de espaço e, em seguida o que quer escrever. Veja exemplo:
+
+Obs. A tecla tab deve ser usada apenas uma vez, haja vista que quando você der enter, a próxima linha já virá com o espaço introduzido pela tecla tab pois, o programa pressupõe que você continuará a sublista.Assim, quando não quiser continuar a sublista, após dar enter apague o espaço para continuar a escrita do texto.
+
+* Homens
+  + Pedro
+  + Ítalo
+  + Geovane
+  
+* Mulheres
+  + Letícia
+  + Ana Clara
+  + Patrícia
+    
+## Criando Links Externos para Sites na Internet:
+
+Para se criar links externos, existem 2 modos, o primeiro consiste em colar o link no cursor. Já o segundo, consiste em criar uma palavra na qual haverá um *hiperlink*, ou seja, você cria um link dentro de uma palavra, dessa forma ao se clicar na palavra, você será redirecionado para o link.Veja os exemplos abaixo.
+
+### Link:
+
+O link será apenas colado na frente do nome da página.
+
+YouTube https://www.youtube.com/
+
+### Hiperlink:
+
+Para se colocar um hiperlink, ou seja, uma palavra contendo um link, deve-se colocar a palavra na qual quer inserir o hiperlink entre colchetes e, em seguida colocar o link dentro de parênteses. 
+
+[YouTube](https://www.youtube.com/)
+
+## Escrevendo Fórmulas Matemáticas no Formato LaTex:
+
+Para se colocar as fórmulas matemáticas no documento,deve-se usar `$$ LaTex $$` (formatação em bloco) ou `$ LaTex $` (formatação em linha). Ou seja, deve ser usado o símbolo $ antes e depois da equação, ficando assim, a equação na linha entre o símbolo inicial e o final.
+
+Obs. A medida que o código for digitado, a equação resultante dele irá aparecendo abaixo.
+
+### Exemplos:
+
+Obs. Os exemplos são meramente ilustrativos.
+
+Atenção: A formatação em linha não deixa espaço entre o símbolo e a equação.
+
+$$
+  \sqrt{\frac{a}{b}}
+$$
+
+$$
+  \forall x \exists y(F(x,y) \to Q(x,y))
+$$
+
+$$
+  s = \sqrt{\frac {\sum_{i=1}^N(x-\bar{x})²}{N-1}}
+$$
+
+$$
+  5=3+2
+$$
+$ax²+bx+c=0$
+
+## Executar Códigos do R:
+
+É possível executar códigos em bloco ou em linha (inline) no R.
+
+### Códigos em Bloco:
+
+Para se colocar um código em bloco, de maneira análoga à escrita em bloco de fórmulas matemáticas, deve-se colocar antes e depois do código o símbolo de execução de códigos em R. O símbolo que deve ser utilizado é a crase repetida 3 vezes e, em seguida um conjunto de chaves contendo a letra r e um espaço após a letra.
+
+* Em Bloco:
+
+\```{r }
+\```
+
+* Em linha:
+
+\``r ``
+
+Obs. O R Markdown vai mostrar o código que você inserir, mesmo que seja uma variável, importação de bibliotecas ou códigos externos, o R Markdown vai funcionar como se você tivesse executando um código normalmente no R Studio, desde que você utilize o código supracitado.
+
+#### Exemplo:
+
+```{r }
+#Definindo a variável x, temos:
+  x <- c("maçã")
+str(x)
+```
+
+### Códigos Inline:
+
+Para se colocar um código inline, deve-se colocar a crase 2 vezes no ínicio e 2 vezes no fim, colocando entre elas, na mesma linha, a letra r, espaço e o código a ser executado naquela linha.
+
+#### Exemplo:
+
+``r x[1] ``
+
+## Configurando os Blocos de Código:
+
+Podemos configurar os blocos de código usando flags. Elas podem possuir valor `TRUE` ou `FALSE`.
+
+### Flag
+
+* **Flag** é o emprego de uma variável para sinalizar algum tipo de evento, situação ou estado do programa.
+
+#### Eval:
+
+O `eval` é responsável pela habilitação ou não do código. Com o comando `eval = False` o código não será executado com possíveis resultados não sendo armazenados.
+
+\```{r eval = TRUE ou FALSE}
+\```
+
+```{r eval = TRUE}
+str(x <- "cavalo")
+```
+
+``r x``
+
+Caso você coloque FALSE, o R Markdown não executará o código pois, ele entenderá que a variável x não existe pois, o FALSE faz com que ela não seja armazenada.
+
+#### Echo:
+
+O `echo`mostra o código utilizado junto ao resultado.
+
+\```{r echo = TRUE ou FALSE}
+\```
+
+```{r echo = TRUE}
+str(x <- "ovelha")
+```
+
+O comando FALSE vai apenas omitir o comando utilizado.
+
+#### Warning:
+
+O `warning` vai exibir possíveis advertências no código.
+
+\```{r warning = TRUE ou FALSE}
+\```
+
+```{r warning = FALSE}
+warning("Lágrimas não são argumentos")
+```
+
+O comando FALSE vai apenas omitir o comando utilizado.
+
+#### Error:
+
+O `error`oculta ou não as mensagens de erro de seu código. O `FALSE` não permite a execução do código.
+
+\```{r error = TRUE ou FALSE}
+\```
+
+```{r error = TRUE}
+str(
+```
+
+Caso eu não queira mostrar o código é possível juntar configurações num mesmo código apenas usando a vígula como separador, como feito abaixo impedindo a visualização do código utilizado.
+
+```{r error = TRUE, echo = FALSE}
+str(
+```
+
+## Nomeando e Executando Blocos de Código:
+
+Após o comando `{r `, você pode nomear o bloco de código.
+
+```{r gráfico, eval=FALSE, echo=FALSE}
+#Criando o Código:
+modelo_arima <- arima.sim(model = list(c(0,0,0)), n = 50)
+
+plot(modelo_arima)
+```
+
+```{r ref.label='gráfico'}
+#Executando o código previamente criado
+```
+
+Essa função é útil para guardar determinado bloco de código e utilizar depois quando for preciso.
+
+## Gerando Documentos em Outros Formatos
+
+Para gerar PDFs, PPTs e afins, insira o tipo de dado no `output`, no bloco inicial do documento.
+ 
+##  Possíveis Configurações
+
+*  `html_document`
+*  `pdf_document` - caso não funcione, baixe e instale o pacote [MiKTeX](https://miktex.org/2.9/setup)
+*  `word_document`
+*  `beamer_presentation`
+*  `slidy_presentation`
+*  `ioslides_presentation`
+*  `word_document`
+
